@@ -1,0 +1,26 @@
+aws_dbt_snowflake_project:
+  outputs:
+    dev:
+      account: SAJCSJJ-VWB86008
+      database: AIRBNB
+      password: Kandula@123456
+      role: ACCOUNTADMIN
+      schema: dbt_schema
+      threads: 1
+      type: snowflake
+      user: ESWARKANDULA
+      warehouse: COMPUTE_WH
+  target: dev
+retail_sales_platform_kaggel:
+  outputs:
+    dev:
+      account: PZXXEPS-YF03539
+      database: RETAIL_DB
+      password: Sharmilabogadhi@0987
+      role: ACCOUNTADMIN
+      schema: dbt_schema
+      threads: 1
+      type: snowflake
+      user: SXB48700
+      warehouse: RETAIL_WH
+  target: dev
