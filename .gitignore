@@ -1,0 +1,33 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# DBT
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# Environment variables (contains passwords — NEVER push this)
+.env
+
+# Airflow
+airflow/logs/
+airflow/plugins/
+
+# Data files (CSV files are too large for GitHub)
+data/raw/
+
+# Power BI
+*.pbix
+
+# OS files
+.DS_Store
+Thumbs.db
