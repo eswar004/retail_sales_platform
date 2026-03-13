@@ -191,15 +191,6 @@ streamlit run dashboard/app.py
 
 ---
 
-## What I Would Do Differently
-
-- Use **dbt snapshots** for true SCD Type 2 on customer dimension
-- Add **Great Expectations** for more granular data quality monitoring
-- Deploy Streamlit to **Streamlit Cloud** so it is publicly accessible
-- Use **AWS S3** instead of local files to simulate real cloud ingestion
-- Add **dbt documentation** with `dbt docs generate` for full lineage UI
-
----
 
 ## Author
 
