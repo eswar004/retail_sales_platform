@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: staging
+    database: RETAIL_DB
+    schema: STAGING
+    tables:
+      - name: orders
+        description: "Raw orders data from Olist"
+      
+      - name: customers
+        description: "Raw customers data from Olist"
+      
+      - name: order_items
+        description: "Raw order items data from Olist"
+      
+      - name: products
+        description: "Raw products data from Olist"
+      
+      - name: sellers
+        description: "Raw sellers data from Olist"
+      
+      - name: payments
+        description: "Raw payments data from Olist"
+      
+      - name: order_reviews
+        description: "Raw order reviews data from Olist"
+      - name: product_category_translation
+        description: "Translates Portuguese product categories to English"

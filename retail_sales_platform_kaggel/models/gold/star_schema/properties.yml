@@ -1,0 +1,70 @@
+version: 2
+
+models:
+  - name: fact_orders
+    description: "Central fact table containing all order metrics"
+    columns:
+      - name: order_id
+        description: "Unique order identifier"
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Customer identifier"
+        tests:
+          - not_null
+
+      - name: order_status
+        description: "Current status of the order"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['delivered', 'shipped', 'canceled', 'unavailable',
+                       'invoiced', 'processing', 'created', 'approved']
+
+      - name: review_score
+        description: "Customer review score"
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+              quote: false
+              config:
+                severity: warn
+
+      - name: total_revenue
+        description: "Total revenue for the order"
+        tests:
+          - not_null
+
+  - name: dim_customers
+    description: "Customer dimension table"
+    columns:
+      - name: customer_unique_id
+        description: "Unique customer identifier"
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_state
+        description: "Brazilian state code"
+        tests:
+          - not_null
+
+  - name: dim_products
+    description: "Product dimension table"
+    columns:
+      - name: product_id
+        description: "Unique product identifier"
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_sellers
+    description: "Seller dimension table"
+    columns:
+      - name: seller_id
+        description: "Unique seller identifier"
+        tests:
+          - not_null
+          - unique
