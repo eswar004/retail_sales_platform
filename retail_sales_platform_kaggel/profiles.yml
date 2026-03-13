@@ -3,7 +3,7 @@ retail_sales_platform_kaggel:
     dev:
       account: PZXXEPS-YF03539
       database: RETAIL_DB
-      password: Sharmilabogadhi@0987
+      password: password_snowflake
       role: ACCOUNTADMIN
       schema: dbt_schema
       threads: 1
